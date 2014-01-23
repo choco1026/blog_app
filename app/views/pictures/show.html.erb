@@ -1,0 +1,13 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @picture.name %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= image_tag(@picture.date_url) if @picture.date.present? %>
+</p>
+
+<%= link_to 'Back', "/publics/pictures" %>

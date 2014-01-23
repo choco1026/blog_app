@@ -1,0 +1,5 @@
+<% @diary.each do |d| %>
+<h2><%= image_tag "icon.png" %><%=d.title%>　　<%=d.updated_at.strftime("%Y/%m/%d(%a) %H:%M")%></h2>
+<p><%=d.body[0..50]%>...</p>
+<p><%= link_to '⇒read more!', "/#{d.id}" %></p>
+<% end %>

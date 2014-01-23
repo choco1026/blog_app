@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ちょこのブログ</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+  <link rel="stylesheet" href="mycss.css">
+  <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.14.1/build/cssreset/cssreset-min.css">
+</head>
+<body>
+	<div id="container">
+
+	<div id="header">
+	<h1><b>ちょこのブログ</b></h1>
+	<p>これはちょこのブログです。</p>
+	<div class="badge">
+		<%= image_tag "badge.png" %>
+	</div>
+	<%= image_tag "newhamu.png" %>
+
+    </div><!--header-->
+
+    <div id="menu">
+	<ul>
+	 <li><a href="/publics/profile">プロフィール</a></li>
+	　<li><a href="/publics/index">日記</a></li>
+	 <li><a href="/publics/pictures">写真</a></p></li>
+	</ul>
+    </div><!--menu-->
+
+	<div id="main">
+	<%= yield %>
+    </div><!--main-->
+
+	<div id="footer">
+		<p>Copyright 2014,choco</p>
+	</div><!--footer-->
+    </div><!--container-->
+
+</body>
+</html>

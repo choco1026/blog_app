@@ -1,0 +1,22 @@
+<h1>写真</h1>
+
+<table>
+  <thead>
+    <tr>
+      
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @pictures.each do |picture| %>
+      <tr>
+        <td><%= image_tag(picture.date_url,:width => '40') if picture.date.present? %></td>
+        <td><%= picture.name %></td>
+        <td><%= link_to 'Show', picture %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
